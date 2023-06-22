@@ -1,7 +1,128 @@
-html {
+/* :root {
+  background: purple;
+}
+
+/* 
+* {
+  color: red
+} має меншу приорітетність, навантажує браузер - цьому не рекомендується! */
+
+/* html {
   max-width: 720px;
+
+  background: blue
 }
 
 body {
   background: #fff;
+} */
+
+/* .box {
+  background: rgb(206, 206, 206);
+} */
+
+/* id пріорітетніше ніж тег */
+/* #user {
+  color: green
+} */
+
+/* h4, 
+/* детальний шлях пріорітетніший за шлях 1го рівня */
+/* h5#user {
+  color: yellowgreen;
+} */ 
+/* 
+.button {
+  background: red;
+}
+
+.box>p {
+  color: rgb(157, 73, 253);
+}
+
+div em {
+  color: blue;
+} */
+
+/* сестринський р одразу за материнським strong */
+/* strong+p {
+  background: brown;
+} */
+
+/* сусідський р на тому ж рівні що й материнський h2*/
+/* h2~p {
+  background: rgb(255, 127, 238);
+} */
+
+/* дочірній p для будь-якого сусіда з h1 (останній приклад)*/
+/* h1 ~ * > p {
+  color: rgb(237, 240, 76);
+  font-size: 40px;
+} */
+
+
+
+
+/* Lesson 2:  */
+
+.card-dark {
+  background: #e2dfdf;
+}
+
+.item {
+  color: green;
+}
+
+.item:first-child {
+  color: blue;
+}
+
+li:last-child {
+  color: rgb(168, 168, 5);
+}
+
+.item:only-child {
+  color: rgb(0, 197, 131);
+}
+
+p:first-of-type {
+  color: blueviolet;
+}
+
+p:last-of-type {
+  color: brown;
+}
+
+.item:only-of-type {
+  color: red;
+}
+
+li:nth-child(2) {
+  color: yellowgreen;
+}
+
+.item:nth-child(2n+3) {
+  background: rgb(255, 203, 32);
+}
+
+li:nth-last-child(3) {
+  color: rgb(38, 184, 176);
+}
+
+.item:nth-of-type(2) {
+  background: blue;
+
+}
+
+.item:nth-last-of-type(2) {
+  font-size: 40px;
+}
+
+li:not(.item) {
+  background: rgb(167, 167, 231);
+}
+
+li:empty {
+  height: 10px;
+  background: red;
 }
