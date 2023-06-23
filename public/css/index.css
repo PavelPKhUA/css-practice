@@ -30,7 +30,7 @@ body {
 /* детальний шлях пріорітетніший за шлях 1го рівня */
 /* h5#user {
   color: yellowgreen;
-} */ 
+} */
 /* 
 .button {
   background: red;
@@ -60,12 +60,9 @@ div em {
   font-size: 40px;
 } */
 
+/* Lesson 4 (2):  */
 
-
-
-/* Lesson 2:  */
-
-.card-dark {
+/* .card-dark {
   background: #e2dfdf;
 }
 
@@ -125,4 +122,84 @@ li:not(.item) {
 li:empty {
   height: 10px;
   background: red;
+} */
+
+/* Lesson 5 (3) */
+
+.card-dark {
+  background: #e2dfdf;
+}
+
+.input-dark {
+  background: #b3b2b2;
+}
+
+.input-dark[required] {
+  background: #0010ee;
+}
+
+/* конкретне значення */
+.input-dark[type='number'] {
+  background: #eeff00;
+}
+
+/* містить окреме слово  */
+.small-img[alt~='small'] {
+  width: 120px;
+}
+
+.small-img[alt~='big'] {
+  width: 150px;
+}
+
+a[rel~='external'] {
+  color: green;
+}
+
+/* починається з вказаного value або з value- (префікс)*/
+button[class|='btn'] {
+  background: rgb(180, 177, 177);
+}
+
+/* починається з вказаного value і може мати будь-яке закінчення (value*)*/
+/* button[class^='btn'] {
+  background: rgb(35, 238, 245);
+} */
+
+a[class^='btn'] {
+  background: rgb(35, 245, 63);
+}
+
+/* має корінь з вказаного value (*value*)*/
+/* a[class*='btn'] {
+  background: rgb(240, 195, 240);
+} */
+
+/* закінчується на вказаний value (*value) */
+a[class$='big'] {
+  background: rgb(214, 245, 35);
+}
+
+/* Псевдоелементи: перша буква */
+.btn::first-letter {
+  color: red;
+}
+
+/* перший рядок (маштабується) */
+.big-text::first-line {
+  color: #7f8804;
+}
+
+.input-dark::placeholder {
+  color: #812020;
+}
+
+.big-text::before {
+  content: '\276E\276E';
+  color: #812020;
+}
+
+.big-text::after {
+  content: '\276F\276F';
+  color: #812020;
 }
