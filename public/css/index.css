@@ -203,3 +203,161 @@ a[class$='big'] {
   content: '\276F\276F';
   color: #812020;
 }
+
+/* Lesson 7 (4) */
+
+#test:target {
+  color: yellow;
+  background: red;
+}
+
+.link:link,
+.link::first-letter {
+  font-size: 140%;
+  color: green;
+}
+
+.link:hover,
+.link span:nth-child(1) {
+  color: #812020;
+}
+
+.link:active,
+.link span:nth-child(2) {
+  color: rgb(160, 160, 1);
+}
+
+.visited:visited {
+  color: red;
+}
+
+.card:active {
+  background: #ffd000;
+}
+
+/* не працює з div, бо tab пререходить лише на роля форми та лінки , треба об'еднувати за допомогою :focus-within*/
+/* .card:focus {
+  background: #ffd000;
+}  */
+
+.form-item {
+  background: gray;
+  padding: 0 10px 0 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.form-item:focus {
+  border-radius: 5px;
+  background: purple;
+}
+
+.form-item::placeholder {
+  color: rgb(209, 167, 209);
+}
+
+/* працює разом з полями форми/лінками, якіможуть бути виділені tab */
+.card:focus-within {
+  border-color: #000;
+  background: #ffd000;
+}
+
+.card:lang(fr) {
+  background: rgb(74, 56, 238);
+  color: #fff;
+}
+
+/* В чому різниця??? */
+.card[lang='en'] {
+  background: #ffd000;
+}
+
+button {
+  padding: 5px;
+  background: yellowgreen;
+  border: gray solid 1px;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background: rgb(179, 202, 132);
+  color: gray;
+  border: gray dotted 1px;
+  pointer-events: none;
+}
+
+button:enabled {
+  background: rgb(123, 255, 0);
+}
+
+button.default {
+  background: yellowgreen;
+}
+
+button:focus,
+button.default:focus {
+  background: #ffd000;
+}
+
+button:hover {
+  background: #0010ee;
+  color: #fff;
+}
+
+button:active {
+  background: #ffd000;
+  color: #fff;
+}
+
+.inp {
+  border: 1px solid black;
+}
+
+.inp:read-write {
+  background: #bbc0fc;
+}
+
+.inp:read-only {
+  border: 1px dashed rgb(32, 32, 32);
+}
+
+input[type='checkbox']:checked + span {
+  background: #fcc8bb;
+}
+
+.valid {
+  background: gray;
+  color: #000;
+}
+
+.valid:valid {
+  background: rgb(158, 211, 158);
+}
+
+.valid:invalid {
+  background: rgb(255, 178, 178);
+}
+
+.valid:optional {
+  background: #bbc0fc;
+}
+
+.number:out-of-range {
+  background: rgb(255, 178, 178);
+}
+
+.number:in-range {
+  background: rgb(158, 211, 158);
+}
+
+.number {
+  background: #bbc0fc;
+}
+
+input.valid:placeholder-shown + span {
+  background: rgb(158, 211, 158);
+}
+
+input.valid:not(:placeholder-shown) + span {
+  background: rgb(255, 178, 178);
+}
