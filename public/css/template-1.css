@@ -1,0 +1,152 @@
+.page {
+  background: #fff;
+  color: #212529;
+  padding: 0 15px;
+}
+
+.page_content {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  box-shadow: 0px 5px 5px #dee2e6;
+  padding: 24px;
+}
+
+.logo {
+  font-size: 17px;
+}
+
+.color_logo {
+  background: #563d7c;
+  color: #fff;
+}
+
+.divider {
+  margin: 0;
+  height: 1px;
+  background: #dee2e6;
+}
+
+/* .nodots {
+  list-style-type: none;
+} */
+
+.nav {
+  display: block;
+}
+
+.nav_link {
+  color: #343a40;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.nav_vertical > .nav_link {
+  display: block;
+}
+
+.nav_inline > .nav_link:not(:last-child) {
+  margin-right: 24px;
+}
+
+.nav_vertical > .nav_link:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.header_nav_right {
+  margin-left: auto;
+  width: fit-content;
+}
+
+.page_block:not(:last-of-type) {
+  margin-bottom: 80px;
+}
+
+.footer {
+  padding: 24px 0;
+}
+
+.footer_copyright {
+  display: block;
+  margin-top: 12px;
+  color: #6c757d;
+  font-size: 12.8px;
+}
+
+.footer_title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer .nav_link {
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.hero_title {
+  margin-bottom: 12;
+  font-size: 56px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.hero_text {
+  margin: 0 auto;
+  max-width: 584px;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.plans_card {
+  text-align: center;
+}
+
+.plans_card:not(:last-of-type) {
+  margin-right: 24px;
+}
+
+.card_item {
+  margin: 24px 0;
+}
+
+.card-header {
+  padding: 12px auto;
+  font-size: 24px;
+  line-height: 28.8px;
+}
+
+.card-body {
+  padding: 0 24px;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.item_period {
+  color: #6c757d;
+  font-size: 29px;
+}
+
+.features:not(:last-of-type) {
+  padding-bottom: 12px;
+}
+
+.card_button {
+  display: block;
+  width: 100%;
+  font-size: 19px;
+  padding: 9px;
+}
