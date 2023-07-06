@@ -127,3 +127,156 @@ none - все скасувати та встановити за замовчув
   text-decoration-style: double;
   text-decoration-color: burlywood;
 }
+
+.ninelesson {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-display: swap;
+}
+
+.ninep span.xxs {
+  font-size: xx-small;
+}
+
+.ninep span.xs {
+  font-size: x-small;
+}
+
+.ninep span.sml {
+  font-size: smaller;
+}
+
+.ninep span.sm {
+  font-size: small;
+}
+
+.ninep span.med {
+  font-size: medium;
+}
+
+.ninep span.lg {
+  font-size: large;
+}
+
+.ninep span.lge {
+  font-size: larger;
+}
+
+.ninep span.xl {
+  font-size: x-large;
+}
+
+.ninep span.xxl {
+  font-size: xx-large;
+}
+
+.ninew span.fwlr {
+  font-weight: lighter;
+}
+
+.ninew span.reg {
+  font-weight: normal;
+}
+
+.ninew span.fwbr {
+  font-weight: bolder;
+}
+
+.ninew span.fwb {
+  font-weight: bold;
+}
+
+.ffs {
+  font-family: serif;
+}
+
+.ffss {
+  font-family: sans-serif;
+}
+
+.ffm {
+  font-family: monospace;
+}
+
+.ffc {
+  font-family: cursive;
+}
+
+.fff {
+  font-family: fantasy;
+}
+
+.fsn {
+  font-style: normal;
+}
+
+.fsi {
+  font-style: italic;
+}
+
+.fso {
+  font-style: oblique;
+}
+
+.nineload span {
+  font-weight: bold;
+}
+
+.nineload div {
+  margin: 15px 0 15px 0;
+}
+
+.ninefontfamily {
+  font-family: 'Comforter', cursive;
+  /* letter-spacing: 0.1em; */
+  font-weight: 550;
+  font-size: x-large;
+}
+
+/* lesson 11 (3) */
+.mycard {
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 5px;
+}
+
+.module {
+  background: gray;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
+.dspn {
+  /* same hidden */
+  display: none;
+}
+
+.block {
+  display: block;
+  width: 250px;
+  margin: auto;
+  background: rgb(199, 199, 199);
+}
+
+.persent {
+  margin: 3%;
+}
+
+.inblock {
+  display: inline-block;
+  padding-right: 50px;
+  background: yellow;
+}
+
+.fitcon {
+  width: fit-content;
+  margin-left: 100px;
+}
+
+.micont {
+  width: min-content;
+}
+
+.macont {
+  width: max-content;
+}
