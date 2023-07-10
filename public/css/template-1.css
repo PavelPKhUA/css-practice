@@ -216,6 +216,8 @@ p {
   overflow: overlay; */
 }
 
+/* see .hero_text  */
+
 .overflow {
   overflow-wrap: anywhere;
   display: none;
