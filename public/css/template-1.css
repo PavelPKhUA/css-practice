@@ -72,6 +72,7 @@
 
 .footer {
   padding: 24px 0;
+  border-top: 1px solid #dee2e6;
 }
 
 .footer_copyright {
@@ -138,6 +139,7 @@
 .item_period {
   color: #6c757d;
   font-size: 29px;
+  vertical-align: 10px;
 }
 
 .features:not(:last-of-type) {
@@ -149,4 +151,32 @@
   width: 100%;
   font-size: 19px;
   padding: 9px;
+}
+
+/* module 5 lesson 12 */
+.card {
+  border: thick ridge blue;
+  border-radius: 15px 50px;
+  box-shadow: 2px 2px 2px red;
+}
+
+.card:hover {
+  outline: 5px solid red;
+  outline-offset: 5px;
+  border-left-style: dashed;
+  border-right-width: thin;
+  border-bottom-color: greenyellow;
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 25px;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 10px 1px rgba(66, 64, 156, 0.254);
+}
+
+h1 {
+  text-shadow: 2px 2px 2px 2px red;
 }
