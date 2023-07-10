@@ -107,6 +107,23 @@
   font-size: 20px;
   line-height: 150%;
   text-align: center;
+
+  /* text-align: left; */
+  /* white-space: nowrap; */
+  /* white-space: pre; */
+  /* white-space: pre-wrap; */
+  /* white-space: break-spaces; */
+  /* white-space: pre-line; */
+
+  /* word-break: break-all; */
+  /* word-break: keep-all; */
+  /* word-break: break-word; */
+
+  hyphens: none;
+  /* hyphens: manual;
+  hyphenate-character: '~~~'; */
+
+  /* word-spacing: 20px; */
 }
 
 .plans_card {
@@ -179,4 +196,27 @@
 
 h1 {
   text-shadow: 2px 2px 2px 2px red;
+}
+
+/* lesson 13 */
+
+/* .plans_card:nth-child(2) > .card {
+  background: red;
+} */
+
+.plans_card:nth-child(2) {
+  /* display: none; */
+  visibility: hidden;
+}
+
+p {
+  background: gray;
+  /* width: 200px;
+  height: 100px;
+  overflow: overlay; */
+}
+
+.overflow {
+  overflow-wrap: anywhere;
+  display: none;
 }
