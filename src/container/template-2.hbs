@@ -1,0 +1,98 @@
+<div class='page'>
+  <div class='page_content'>
+	<header class="page_block">
+		<div class='header row g-0'>
+			<div class="col-3">
+				{{>logo}}
+			</div>
+
+			<div class='header_nav col-9'>
+				<div class="header_nav_right">
+					{{>nav list=header}}
+				</div>				
+			</div>
+		</div>
+	</header>
+    
+	<section class="page_block">
+		<div class="hero">
+			{{#with hero}}
+				{{>hero title=title text=text}}
+				<a href="{{button.url}}" class="button">
+					{{button.text}}
+				</a>
+			{{/with}}			
+		</div>		
+	</section>
+
+	<section class="page_block">
+		<div class="row g-4">
+			{{#each preview}}
+				<div class="col-6">
+					{{>cardPreview data=this}}
+				</div>
+			{{/each}}			
+		</div>
+	</section>
+
+	<main class="page_block">
+		<div class="main row g-0">
+			<div class="list_header col-12">
+				<div class="row">
+					<div class="col-3">
+						<h2 class="list_title">List of posts</h2>
+					</div>
+					<div class="col-9 buttons">
+						{{#each categories}}
+							<button class="category_button posts{{id}}">{{text}}</button>				
+						{{/each}}
+					</div>
+				</div>
+			</div>
+
+			<div class="list col-7">				
+				{{#each news}}
+					{{>post data=this}}
+				{{/each}}				
+			</div>
+
+			<aside class="list_aside col-5">
+				<div class="aside_about">
+					<h5 class="aside_title">About</h5>
+					<p class="aside_text">{{about}}</p>
+				</div>
+				<div class="aside_block">
+					{{>linkList title='Archive' data=archive}}
+				</div>
+				<div class="aside_block">
+					{{>linkList title='Social' data=social}}
+
+				</div>
+				
+			</aside>
+		</div>
+		
+		
+	</main>
+
+    <footer class="page_block">
+		{{!-- {{>divider}} --}}
+		<div class="row g-0 footer">
+			<div class="col-3">
+				{{>logo}}
+				<span class="footer_copyright">Copyright 2023-2024</span>				
+			</div>
+			{{#each footer}}
+				<div class="col-3">
+					<span class="footer_title">
+						{{title}}
+					</span>					
+					{{>nav list=links isVertical=true}}
+				</div>
+			{{/each}}
+			
+		</div>
+	</footer>
+
+  </div>
+</div>

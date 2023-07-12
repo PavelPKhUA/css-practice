@@ -1,0 +1,322 @@
+.page {
+  background: #fff;
+  color: #212529;
+  padding: 0 15px;
+}
+
+.page_content {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  box-shadow: 0px 5px 5px #dee2e6;
+  padding: 24px;
+}
+
+.logo {
+  font-size: 17px;
+}
+
+.color_logo {
+  background: #563d7c;
+  color: #fff;
+}
+
+.divider {
+  margin: 0;
+  height: 1px;
+  background: #dee2e6;
+}
+
+/* .nodots {
+  list-style-type: none;
+} */
+
+.nav {
+  display: block;
+}
+
+.nav_link {
+  color: #343a40;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.nav_vertical > .nav_link {
+  display: block;
+}
+
+.nav_inline > .nav_link:not(:last-child) {
+  margin-right: 24px;
+}
+
+.nav_vertical > .nav_link:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.header_nav_right {
+  margin-left: auto;
+  width: fit-content;
+}
+
+.page_block:not(:last-child) {
+  margin-bottom: 80px;
+}
+
+.footer {
+  padding: 24px 0;
+  border-top: 1px solid #dee2e6;
+}
+
+.footer_copyright {
+  display: block;
+  margin-top: 12px;
+  color: #6c757d;
+  font-size: 12.8px;
+}
+
+.footer_title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer .nav_link {
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.hero_title {
+  margin-bottom: 12;
+  font-size: 56px;
+  font-weight: 500;
+}
+
+.hero_text {
+  max-width: 584px;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.hero {
+  background: #343a40;
+  border-radius: 24px;
+  padding: 80px;
+  color: #fff;
+}
+
+.button {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  max-width: 248px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  background: #007bff;
+  padding: 10px 20px;
+}
+
+.button:hover {
+  background: #3094ff;
+}
+
+.preview {
+  border-radius: 24px;
+  border: 1px solid #dee2e6;
+  padding: 24px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.preview_header > span:not(:last-of-type) {
+  margin-right: 12px;
+}
+
+.preview_date {
+  color: #6c757d;
+}
+
+.preview_category {
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.category_id1 {
+  color: #007bff;
+}
+
+.category_id2 {
+  color: #198754;
+}
+
+.category_id3 {
+  color: #ff0000;
+}
+
+.category_id4 {
+  color: #ff7a00;
+}
+
+.preview > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.preview_title {
+  display: block;
+  color: #343a40;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 44px;
+}
+
+.preview_description {
+  color: #212529;
+  font-size: 16px;
+}
+
+.preview a {
+  color: #007bff;
+}
+
+.list_title {
+  color: #212529;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 34px;
+  margin: 0;
+}
+
+.list_header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 40px;
+}
+
+.category_button:not(:last-of-type) {
+  margin-right: 12px;
+}
+
+.category_button {
+  color: #6c757d;
+  padding: 10px 16px;
+  line-height: 100%;
+  border-radius: 32px;
+  border: 1px solid #6c757d;
+}
+
+.category_button:hover {
+  background: #7e828563;
+}
+
+.buttons {
+  padding: 0 12px 0 0;
+  text-align: right;
+}
+
+.post {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.post_title {
+  color: #212529;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.post_date {
+  color: #999;
+  line-height: 24px;
+}
+
+.post_author {
+  color: #0050ff;
+  line-height: 24px;
+}
+
+.post_description {
+  color: #212529;
+}
+
+.post_link {
+  color: #007bff;
+}
+
+.list_aside {
+  padding-left: 60px;
+}
+
+.list > *:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.post > *:not(:first-child) {
+  margin: 12px 0;
+}
+
+.list_aside > *:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.aside_about {
+  padding: 24px;
+  background: #f8f9fa;
+}
+
+.aside_block {
+  padding: 14px 16px;
+}
+
+.aside_link {
+  display: block;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.aside_link:hover {
+  text-decoration: underline;
+}
+
+.aside_about > *:not(:last-child),
+.aside_block > *:not(:last-child) {
+  padding-bottom: 12px;
+}
+
+.aside_title {
+  color: #212529;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.aside_text {
+  color: #212529;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.aside_header {
+  color: #212529;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.aside_link {
+  color: #007bff;
+  line-height: 24px;
+}
+
+.aside_header,
+.aside_title,
+.aside_text {
+  margin-bottom: 0;
+}
