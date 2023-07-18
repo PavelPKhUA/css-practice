@@ -1,3 +1,8 @@
+:root {
+  --border-color: #dee2e6;
+  --spacing-medium: 24px;
+}
+
 .page {
   background: #fff;
   color: #212529;
@@ -11,8 +16,8 @@
 }
 
 .header {
-  box-shadow: 0px 5px 5px #dee2e6;
-  padding: 24px;
+  box-shadow: 0px 5px 5px var(--border-color, #dee2e6);
+  padding: var(--spacing-medium);
 }
 
 .logo {
@@ -27,7 +32,7 @@
 .divider {
   margin: 0;
   height: 1px;
-  background: #dee2e6;
+  background: var(--border-color, #dee2e6);
 }
 
 /* .nodots {
@@ -54,7 +59,7 @@
 }
 
 .nav_inline > .nav_link:not(:last-child) {
-  margin-right: 24px;
+  margin-right: var(--spacing-medium);
 }
 
 .nav_vertical > .nav_link:not(:last-child) {
@@ -71,8 +76,8 @@
 }
 
 .footer {
-  padding: 24px 0;
-  border-top: 1px solid #dee2e6;
+  padding: var(--spacing-medium) 0;
+  border-top: 1px solid var(--border-color, #dee2e6);
 }
 
 .footer_copyright {
@@ -131,21 +136,21 @@
 }
 
 .plans_card:not(:last-of-type) {
-  margin-right: 24px;
+  margin-right: var(--spacing-medium);
 }
 
 .card_item {
-  margin: 24px 0;
+  margin: var(--spacing-medium) 0;
 }
 
 .card-header {
   padding: 12px auto;
-  font-size: 24px;
+  font-size: var(--spacing-medium);
   line-height: 28.8px;
 }
 
 .card-body {
-  padding: 0 24px;
+  padding: 0 var(--spacing-medium);
 }
 
 .price {
@@ -300,4 +305,95 @@ body {
   border-image-repeat: space;
 
   border-image-outset: 40px;
+}
+
+/* Lesson 16 module 5  */
+
+.card_item {
+  /* list-style-type: none; */
+  /* list-style-type: disc; */
+  /* list-style-type: square; */
+  /* list-style-type: circle; */
+  /* list-style-type: decimal; */
+  /* list-style-type: decimal-leading-zero; */
+  /* list-style-type: lower-roman; */
+  /* list-style-type: upper-roman; */
+  /* list-style-type: lower-alpha; */
+  /* list-styleinside-type: upper-alpha; */
+
+  list-style-position: inside;
+  /* list-style-position: outside; */
+
+  /* list-style-image: url('/img/check2.svg'); */
+  list-style-image: linear-gradient(
+    to top right,
+    yellow,
+    blue
+  );
+}
+
+.features {
+  display: list-item;
+}
+
+.table {
+  /* margin: 40px 0; */
+
+  /* table-layout: fixed; */
+  table-layout: fixed;
+
+  width: 600px;
+
+  /* border-collapse: separate; */
+  /* border-collapse: collapse; */
+  border-collapse: unset;
+
+  border-spacing: 20px 10px;
+
+  /* caption-side: unset; */
+  /* caption-side: bottom; */
+  caption-side: top;
+}
+
+.table tr td {
+  border: 1px solid #aaaaaa;
+  border-bottom-color: yellow;
+  border-right-color: blue;
+  empty-cells: hide;
+  /* padding: 0 40px; */
+}
+
+.table tr td:hover {
+  opacity: 0.5;
+}
+
+/* .table tr td::before {
+  content: open-quote;
+}
+
+.table tr td::after {
+  content: close-quote;
+} */
+
+.table tr td::before,
+.table tr td::after {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url('/img/check.svg');
+}
+
+.table tr td::before {
+  margin-right: 15px;
+}
+
+.table tr td::after {
+  margin-left: 15px;
+}
+
+.calc {
+  width: 600px;
+  margin: 0;
+  margin-left: calc(50% - (600px / 2));
 }
