@@ -1,3 +1,30 @@
+@keyframes fly {
+  from {
+    top: 0;
+    left: 0;
+    background: blue;
+  }
+
+  25% {
+    top: 500px;
+    left: 500px;
+    background: yellow;
+    width: 400px;
+  }
+
+  50% {
+    left: 0;
+    background: greenyellow;
+    width: 300px;
+  }
+
+  to {
+    top: 0;
+    left: 0;
+    background: green;
+  }
+}
+
 :root {
   --space-m: 12px;
   --space-xm: 16px;
@@ -18,6 +45,8 @@
   --border-radius: 12px;
 
   --weight-title: 500;
+
+  --page-width: 960px;
 }
 
 /* =================== */
@@ -32,7 +61,7 @@
 }
 
 .page_content {
-  max-width: 960px;
+  max-width: var(--page-width);
   width: 100%;
   font-family: 'Roboto', sans-serif;
 
@@ -194,6 +223,7 @@
   padding: var(--space-m) var(--space-xm);
   display: inline-block;
   text-decoration: none;
+  border: 1px solid var(--color-white);
   border-radius: calc(var(--border-radius) / 3);
 }
 
@@ -246,3 +276,185 @@
 .form_button:hover {
   background: var(--color-button);
 }
+
+/* lesson 19 module 5 */
+
+/* .hero_photo {
+  position: relative;
+  left: 100px;
+  bottom: 300px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.hero {
+  position: relative;
+} */
+
+.hero_slider_icon {
+  font-size: var(--space-l);
+  font-weight: var(--weight-title);
+  background: var(--color-primary);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+
+  position: absolute;
+  top: calc(50% - 18px);
+}
+
+.hero_slider_icon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.hero_slider {
+  position: relative;
+}
+
+.hero_slider_left {
+  left: var(--space-l);
+}
+
+.hero_slider_right {
+  right: var(--space-l);
+}
+
+.header {
+  /* position: fixed; */
+  position: sticky;
+  max-width: var(--page-width);
+  width: 100%;
+  top: 0;
+  /* left: calc(50% - var(--page-width) / 2); */
+  background-color: var(--color-white);
+
+  z-index: 1;
+}
+
+.page_content {
+  /* padding-top: var(--space-xxl); */
+}
+
+.modal {
+  /* position: fixed; */
+  position: sticky;
+  top: 24px;
+  left: 24px;
+  /* height: 100px; */
+  max-width: 600px;
+  width: 100%;
+  background: var(--color-button);
+  color: var(--color-white);
+  z-index: 2;
+  padding: var(--size-l);
+  border-radius: calc(var(--border-radius) * 2);
+  line-height: 150%;
+
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-m);
+}
+
+.modal_cross:hover {
+  cursor: pointer;
+}
+
+.modal_image {
+  height: 100px;
+  width: 300px;
+  float: left;
+  margin-right: var(--space-m);
+  margin-top: var(--space-m);
+
+  /* object-fit: contain; */
+  /* object-fit: cover; */
+  /* object-fit: fill; */
+  /* object-fit: none; */
+  object-fit: scale-down;
+  object-position: bottom left;
+}
+
+.modal_text {
+  clear: both;
+}
+
+.hero,
+.modal_cross {
+  user-select: none;
+}
+
+.input {
+  caret-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: calc(var(--border-radius) / 3);
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+/* lesson 20 module 5 */
+
+.nav_link {
+  transition-property: color;
+  transition-duration: 1s;
+}
+
+.card_button,
+.form_button {
+  transition-property: background, background-color, opacity;
+  transition-duration: 1s;
+}
+
+.card_button:hover,
+.form_button:hover {
+  background-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
+
+.modal {
+  position: fixed;
+  top: 200px;
+  left: 200px;
+
+  /* transition-property: top;
+  transition-duration: 3s;
+  transition-timing-function: cubic-bezier(
+    0.075,
+    0.82,
+    0.165,
+    1
+  ); */
+  /* transition-delay: 2s; */
+}
+
+.modal {
+  /* top: 600px; */
+  animation-name: fly;
+  animation-duration: 4s;
+  transition-timing-function: cubic-bezier(
+    0.98,
+    -0.05,
+    0.57,
+    0.68
+  );
+
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+body:hover .modal {
+  animation-play-state: paused;
+  /* animation-fill-mode: both; */
+  animation-delay: 3s;
+}
+
+/* see @keyframes fly  on top*/
