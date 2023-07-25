@@ -233,6 +233,7 @@
   gap: var(--space-l);
   padding: var(--space-l);
   position: relative;
+  background-color: #f8f9fa;
 }
 
 .exp_header {
