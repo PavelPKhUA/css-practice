@@ -1,0 +1,109 @@
+
+<header class='header'>
+	<a href="#test">
+		{{>logo}}
+	</a>
+
+	<div class='header_nav'>
+		<div class="header_nav_right">
+			{{>nav list=header}}
+		</div>				
+	</div>
+</header>
+
+<main class="main">
+	<div class="hero">
+		{{#with info}}
+			<h1 class="hero_title">
+				{{title}}
+			</h1>
+			<p class="hero_description">
+				{{description}}
+			</p>
+		{{/with}}
+	</div>
+	<form class="form">
+		{{#with form}}		
+			<div class="form_input_list">
+				{{#each inputs}}
+					<input type="{{type}}" placeholder="{{placeholder}}" name="{{name}}" id="form-input-{{id}}" class="form_input">
+				{{/each}}
+			</div>
+			<div class="form_checkbox">
+				{{#with checkbox}}
+					<input type="checkbox" name="{{name}}" id="{{name}}">
+					<div></div>
+					<label for="{{name}}">{{label}}</label>
+				{{/with}}				
+			</div>
+			<button type="submit" class="form_button">
+				{{button}}
+			</button>
+			<div class="form_divider"></div>
+			<p class="form_info">
+				{{info}}
+			</p>
+		{{/with}}
+	</form>
+</main>
+
+<div class="updates">
+	{{#with updates}}
+		<strrong class="upd_title">
+			{{title}}
+		</strrong>
+		{{#each list}}
+			<div class="upd_list_item">
+				<img src="https://xsgames.co/randomusers/avatar.php?g=female" alt="user logo" width="32px" height="32px">
+				<div class="upd_item_text">
+					<p>&#64;{{nickname}}</p>
+					<p class="upd_description">{{description}}</p>
+				</div>
+			</div>		
+		{{/each}}
+		<a href="{{show_all.url}}" class="upd_link">{{show_all.text}}</a>
+	{{/with}}
+</div>
+
+<div class="expirience">
+	{{#with expirience}}
+		<div>
+			<h2 class="exp_header">
+				{{title}}
+			</h2>
+			<span class="exp_badge">
+				{{badge}}
+			</span>
+		</div>
+		
+		<div class="exp_list">
+			{{#each list}}
+				<div class="exp_item">
+					<strong class="exp_title">
+						{{name}}
+					</strong>
+					<p class="exp_text">
+						{{details}}
+					</p>
+				</div>
+			{{/each}}
+		</div>
+		
+	{{/with}}
+</div>
+
+<footer class="footer" id="test">
+	<div>
+		{{>logo}}
+		<span class="footer_copyright">Copyright 2023-2024</span>				
+	</div>
+	{{#each footer}}
+		<div>
+			<span class="footer_title">
+				{{title}}
+			</span>					
+			{{>nav list=links isVertical=true}}
+		</div>
+	{{/each}}
+	
+</footer>
