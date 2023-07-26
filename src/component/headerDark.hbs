@@ -1,0 +1,26 @@
+<div class="header_block">
+	{{#with header}}
+		<header class='header'>			
+			<a href="#test">
+				{{>logo}}
+			</a>
+
+			<div class='header_nav'>
+				<div class="header_nav_right">
+					{{>nav list=links}}
+				</div>				
+			</div>			
+		</header>
+		<div class="header_ad">
+			<div class="ad_text">
+				<div class="ad_logo">
+					Ad
+				</div>
+				<a href="{{ad.url}}" class="ad_link">{{ad.text}}</a>
+			</div>
+			<span>
+				Users online: {{userOnline}}
+			</span>
+		</div>
+	{{/with}}
+</div>

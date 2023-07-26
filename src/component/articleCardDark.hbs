@@ -1,0 +1,26 @@
+{{#with data}}
+  {{#each articles}}
+    <div class='art_card' id='art-card-{{id}}'>
+      <div class='art_image_block'>
+        <img
+          src='{{photo}}'
+          alt='Article photo'
+          class='art_image'
+          width='362'
+        />
+        {{#if isNew}}
+          <span class='art_badge'>
+            new
+          </span>
+        {{/if}}
+      </div>
+      <strong class='art_name'>
+        {{name}}
+      </strong>
+      <p class='art_description'>
+        {{description}}
+      </p>
+      <a href='#' class='art_card_button'>Read All</a>
+    </div>
+  {{/each}}
+{{/with}}
