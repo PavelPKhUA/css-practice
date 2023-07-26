@@ -302,9 +302,10 @@
 }
 
 .art_card {
-  max-width: 362px;
+  max-width: 368px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   gap: var(--space-xm);
 }
