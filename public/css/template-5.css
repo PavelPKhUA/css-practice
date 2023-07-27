@@ -150,8 +150,8 @@
 }
 
 .messages {
-  max-width: 620px;
-  width: 100%;
+  /* max-width: 620px;
+  width: 100%; */
 
   background-color: var(--color-white);
   border-radius: var(--border-radius-d);
@@ -257,8 +257,8 @@
 /* Form */
 
 .form {
-  max-width: 340px;
-  width: 100%;
+  /* max-width: 340px;
+  width: 100%; */
 
   background-color: var(--color-white);
   border-radius: var(--border-radius-d);
@@ -350,3 +350,108 @@
   border-color: var(--color-primary);
   background-color: var(--color-primary);
 }
+
+/* lesson 22 module 5 */
+
+.advantages {
+  display: grid;
+
+  /* grid-template-columns: auto; */
+  /* grid-template-columns: max-content; */
+  /* grid-template-columns: min-content; */
+  /* grid-template-columns: minmax(200px, 350px); */
+  /* grid-template-columns: 318px 318px 318px; */
+  /* grid-template-columns: 32% 32% 32%; */
+  /* grid-template-columns: 1fr 1fr 2fr; */
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  /* grid-template-rows: repeat(3, 1fr); */
+  /* grid-template-columns: repeat(3, minmax(150px, 1fr)); */
+  /* grid-template-columns: fit-content(35%) 1fr 38%; */
+  /* grid-template-columns: min-content max-content 1fr; */
+  /* grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); */
+
+  /* Автоматичний вибір кількості колонок та  стовпців та варіація розмірів елементів */
+
+  /* grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); */
+
+  /* grid-template-rows: repeat(3, 300px); */
+  grid-template-columns: repeat(2, 1fr);
+  /* justify-items: flex-end;
+  place-content: flex-end flex-end; */
+  grid-auto-rows: 200px;
+  /* align-items: center; */
+  /* place-items: flex-end center; */
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-areas: 'messages messages form' 'advantages advantages advantages'; */
+  grid-auto-rows: auto;
+  /* grid-auto-rows: 1fr; */
+}
+
+.messages {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  /* grid-area: messages; */
+}
+
+.form {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  /* grid-area: form; */
+}
+
+.advantages {
+  /* grid-column: 5 / 8; */
+  grid-row: 3 / 4;
+  /* grid-area: advantages; */
+}
+
+.advantages > div:first-of-type {
+  place-self: flex-start flex-start;
+  /* justify-self: flex-start;
+  align-self: flex-start; */
+}
+
+.adv_item {
+  height: 100%;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-auto-columns: 3fr; */
+  /* grid-auto-flow: row dense; */
+}
+
+/* .footer > div {
+  background-color: #afb2b4;
+} */
+
+/* .footer > div:first-of-type {
+  grid-column: 1 / 3;
+  background-color: blue;
+} */
+
+/* .footer > div:nth-of-type(2) {
+  grid-column: 1 / 4;
+  background-color: yellow;
+} */
+
+/* .footer > div:last-of-type {
+  grid-column: 1 / 3;
+  background-color: red;
+} */
+
+/* .footer > div:nth-of-type(2) {
+  order: -1;
+} */

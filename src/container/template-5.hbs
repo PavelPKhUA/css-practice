@@ -60,6 +60,19 @@
 			</p>
 		{{/with}}
 	</form>
+
+	{{!-- <div class="advantages"> --}}
+		{{#each advantages}}
+			<div class="adv_item">
+				<strong class="adv_title">
+					{{title}}
+				</strong>
+				<p class="adv_text">
+					{{text}}
+				</p>
+			</div>
+		{{/each}}
+	{{!-- </div> --}}
 </main>
 
 <div class="advantages">
@@ -74,6 +87,8 @@
 		</div>
 	{{/each}}
 </div>
+
+
 
 <footer class="footer" id="test">
 	<div>
