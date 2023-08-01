@@ -11,7 +11,7 @@
 	</div>
 </header>
 
-<div class="modal">
+{{!-- <div class="modal">
 	<div>
 		{{hero.text}}
 		{{hero.text}}
@@ -26,32 +26,34 @@
 		&#10060; 
 	</div>
 	
+</div> --}}
+
+{{!-- <input type="text" class="input"> --}}
+
+<div class="hero_container">
+	<div class="hero">
+		{{#with hero}}
+			<div class="hero_content">
+				<h1 class="hero_title">
+					{{title}}
+				</h1>
+				<p class="hero_text">
+					{{text}}
+				</p>
+			</div>
+			<div class="hero_slider">
+				<div class="hero_slider_icon hero_slider_left">
+					&#9664;
+				</div>
+				<img src="{{photo}}" alt="hero image" class="hero_photo">
+				<div class="hero_slider_icon hero_slider_right">
+					&#9654;
+				</div>
+			</div>		
+		{{/with}}	
+	</div>
 </div>
 
-<input type="text" class="input">
-
-<div class="hero">
-	{{#with hero}}
-		<div class="hero_content">
-			<h1 class="hero_title">
-				{{title}}
-			</h1>
-			<p class="hero_text">
-				{{text}}
-			</p>
-		</div>
-		<div class="hero_slider">
-			<div class="hero_slider_icon hero_slider_left">
-				&#9664;
-			</div>
-			<img src="{{photo}}" alt="hero image" class="hero_photo">
-			<div class="hero_slider_icon hero_slider_right">
-				&#9654;
-			</div>
-		</div>		
-	{{/with}}
-	
-</div>
 
 <main class="blog">
 	{{#each blog}}
@@ -66,7 +68,7 @@
 				{{title}}
 			</h3>
 			<p class="form_text">
-				{{info}}
+				{{info}}<span class="ex">ex</span>
 			</p>
 		</div>
 		<div class="form_action">
@@ -93,3 +95,7 @@
 	{{/each}}
 	
 </footer>
+
+{{!-- <div class="test">
+	Test
+</div> --}}

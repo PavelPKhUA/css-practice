@@ -1,3 +1,5 @@
+@import '/css/var.css';
+
 @keyframes fly {
   from {
     top: 0;
@@ -23,30 +25,6 @@
     left: 0;
     background: green;
   }
-}
-
-:root {
-  --space-m: 12px;
-  --space-xm: 16px;
-  --space-l: 24px;
-  --space-xxl: 80px;
-
-  --size-s: 14px;
-  --size-d: 16px;
-  --size-l: 20px;
-
-  --color-border: #dee2e6;
-  --color-primary: #563d7c;
-  --color-white: #fff;
-  --color-button: #6c757d;
-  --color-black: #212529;
-  --color-text: #343a40;
-
-  --border-radius: 12px;
-
-  --weight-title: 500;
-
-  --page-width: 960px;
 }
 
 /* =================== */
@@ -458,3 +436,182 @@ body:hover .modal {
 }
 
 /* see @keyframes fly  on top*/
+
+/* Lesson 24 module 5  */
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  width: 100%;
+}
+
+/* @media all and (min-width: 0px) and (max-width: 600px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+} */
+
+@media all and (width <= 600px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 601px) and (max-width: 800px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media not all and (min-width: 601px) and (max-width: 800px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
+
+/* .hero {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media all and (min-width: 0px) and (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+} */
+
+.form {
+  gap: var(--space-l);
+}
+
+.form_button {
+  max-width: 300px;
+  min-width: 160px;
+  width: 100%;
+}
+
+@media all and (width <= 560px) {
+  .form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .form_content {
+    max-width: 300px;
+    width: 100%;
+    line-height: 150%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: var(--space-l);
+  }
+}
+
+/* @container */
+
+.hero_container {
+  container-type: inline-size;
+  container-name: hero;
+}
+
+@container hero (width < 800px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero_photo {
+    min-width: 320px;
+    width: 100%;
+    min-height: 320px;
+    height: 100%;
+  }
+}
+
+/* @layer Має меншу пріорітетність*/
+
+/* @layer normalize, main, secondary;
+
+@layer seconndary {
+  .card {
+    background-color: red;
+  }
+}
+
+@layer main {
+  .card {
+    background-color: var(--color-button);
+  }
+} */
+
+/* @font-face Краще підключати як окремі css-файли */
+
+@font-face {
+  font-family: 'Segment';
+  src: url('/font/Segment-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Segment';
+  src: url('/font/Segment-SemiBold.otf');
+  font-weight: 600;
+}
+
+/* @font-face {
+	font-family: 'FontName';
+	src: url('FileName.eot');
+	src: url('FileName.eot?#iefix') format('embedded-opentype'),
+		 url('FileName.woff') format('woff'),
+		 url('FileName.ttf') format('truetype'),
+		 url('FileName.svg#FontName') format('svg');
+	font-style: normal;
+	font-weight: normal;
+} */
+
+.card {
+  font-family: Segment, sans-serif;
+}
+
+.card_title {
+  font-weight: 600;
+}
+
+/* @import шрифт так краще не підключати через меншу пріорітетність */
+/* Підключається тільки зверху! */
+/* See at the top of this page! */
+
+.ex {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-left: 1ex;
+}
+
+/* .test {
+  position: absolute;
+  background: red;
+  top: 0;
+  left: 0;
+
+  height: 100vmin;
+  width: 100vmin;
+} */
+
+.hero_title {
+  font-size: 5cqw;
+}
+
+.hero_text {
+  font-size: 3cqi;
+}
+
+.hero_photo {
+  min-height: 320px;
+}
